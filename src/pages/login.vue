@@ -11,8 +11,8 @@ const password = ref("");
 
 const router = useRouter();
 
-const logginIn = () => {
-    login(username.value, password.value);
+const logginIn = async () => {
+    await login(username.value, password.value);
     if (isAuthenticated.value) {
        router.push("/");
     } else {
@@ -28,7 +28,6 @@ const { ready, start } = useTimeout(3000, { controls: true });
 </script>
 <template>
 <div class="flex flex-col items-center justify-center min-h-screen-nonav">
-    Logged in: {{ isAuthenticated }}
     <div class="flex items-center justify-center overflow-hidden bg-gray-200 rounded-lg shadow-2xl">
        <img class="h-64" src="../assets/bglogin.png" alt="Hello BG">
        <form @submit.prevent="logginIn" class="flex flex-col p-4 space-y-4">
