@@ -1,4 +1,16 @@
 <template>
-<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate a illo, quaerat alias distinctio perferendis quia incidunt molestias placeat ipsa commodi repellendus blanditiis iusto assumenda reiciendis illum recusandae quibusdam ipsum.
-</p>
+<h1 class="mt-8 text-6xl font-thin tracking-tighter text-center">Cool Chat</h1>
+<div class="min-h-[500px] w-full mt-8 rounded-lg shadow-2xl flex flex-col justify-between">
+    <ul class="p-4 space-y-4">
+        <li v-for="n in 5">
+            <div class="flex justify-between px-4 py-2 bg-gray-200 rounded-lg">
+                <span>Message itself</span>
+                <span>by Author Name</span>
+            </div>
+        </li>
+    </ul>
+    <div>
+        <input class="w-full p-4 rounded-lg focus:outline-none focus:bg-yellow-200" type="text" placeholder="Type a message..."/>
+    </div>
+</div>
 </template>
